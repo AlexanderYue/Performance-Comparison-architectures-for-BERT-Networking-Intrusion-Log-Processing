@@ -100,4 +100,3 @@ python evaluate.py --file classification_output.jsonl
   * **Google Colab:** When using `benchmark_colab.ipynb`, you must upload and extract `archive.zip` directly within the notebook session environment.
   * **Troubleshooting:** If you encounter model or tokenizer loading errors, ensure all dependencies are correctly installed (`requirements.txt`) and that local model files are accessible at the specified path.
 
-Would you like me to draft a *requirements.txt* file based on the context of this project?
