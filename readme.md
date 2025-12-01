@@ -30,14 +30,27 @@ This project evaluates the **inference performance** of a **BERT-based Network I
 
 ## ⚙️ Setup Instructions
 
-### 1\. Prepare Test Logs
+### 1\. Importing Model from Hugging-Face
+
+1.  Go to https://huggingface.co/yashika0998/IoT-23-BERT-Network-Logs-Classification
+2.  Navigate to "Files and Versions"
+3.  Download the following files:
+    -config.json
+    -pytorch_model.bin
+    -ONNX-model-Network-Logs-Classification.onnx
+5.  Create a new directory named `local_model_files` in the project root.
+6.  Move the downloaded content into the created directory.
+
+
+### 2\. Prepare Test Logs
 
 1.  Create a new directory named `test_logs` in the project root.
-2.  Copy `archive.zip` into the `test_logs` directory.
-3.  **Extract its contents** into `test_logs`. This provides the **CIC-IDS2017 CSV files** used for benchmarking.
-4.  **Verification:** In `main.py` or `main_mac.py`, confirm that the `TEST_LOGS_DIR` variable correctly points to this path (e.g., `"./test_logs"`).
+2.  Download **CIC-IDS2017 CSV files**
+3.  Copy `archive.zip` into the `test_logs` directory.
+4.  **Extract its contents** into `test_logs`. This provides the **CIC-IDS2017 CSV files** used for benchmarking.
+5.  **Verification:** In `main.py` or `main_mac.py`, confirm that the `TEST_LOGS_DIR` variable correctly points to this path (e.g., `"./test_logs"`).
 
-### 2\. Optional: Dataset Preparation
+### 3\. Optional: Dataset Preparation
 
   * **Merging:** Use `python merge_csv.py` if your raw CSV files need to be combined.
   * **Subsampling (Recommended for CPU):** For hardware where full-dataset inference is too slow ($\approx 2.83$ million flows), run `python splitter.py` to generate a smaller, subsampled dataset.
