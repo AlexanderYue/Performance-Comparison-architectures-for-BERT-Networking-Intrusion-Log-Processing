@@ -1,0 +1,14 @@
+--- HARDWARE BENCHMARK REPORT ---
+Date/Time: Fri Nov 28 05:05:29 2025
+Device: cuda (DType: torch.float16)
+-----------------------------------
+Total Logs Processed: 225745
+
+--- Timing Breakdown ---
+1. Preprocessing Time (I/O & Formatting): 13.1480 seconds
+2. Inference Time (Model Execution): 183.5416 seconds
+Total Pipeline Time: 196.6896 seconds
+
+--- Execution Metrics ---
+Throughput (logs/sec): 1229.94
+Average Latency (ms/log): 0.8130
